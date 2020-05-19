@@ -2,9 +2,9 @@ pipeline {
    agent any
 
    environment {
-     // You must set the following environment variables
-     // ORGANIZATION_NAME
-     // YOUR_DOCKERHUB_USERNAME (it doesn't matter if you don't have one)
+      SERVICE_NAME = "fleetman-api-gateway"
+      ORGANIZATION_NAME = "lucas-ci-cd-demo"
+      YOUR_DOCKERHUB_USERNAME = "danieluke"
      
      SERVICE_NAME = "fleetman-webapp"
      REPOSITORY_TAG="${YOUR_DOCKERHUB_USERNAME}/${ORGANIZATION_NAME}-${SERVICE_NAME}:${BUILD_ID}"
